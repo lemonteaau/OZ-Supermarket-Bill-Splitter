@@ -26,42 +26,57 @@
           const checkbox = document.createElement("input");
           checkbox.type = "checkbox";
           checkbox.id = "checkbox" + index;
-          checkbox.style.marginRight = "5px";
+          checkbox.style.margin = "0 10px";
+          checkbox.style.cursor = "pointer";
+          checkbox.style.transform = "scale(1.5)";
 
           const quantityInput = document.createElement("input");
           quantityInput.type = "number";
-          quantityInput.value = 0; // 默认值设置为0
+          quantityInput.value = 0;
           quantityInput.min = 0;
           quantityInput.max = totalQty;
           quantityInput.id = "quantity" + index;
           quantityInput.style.width = "50px";
-          quantityInput.style.marginRight = "10px";
-          quantityInput.disabled = true; // 默认禁用输入框
+          quantityInput.style.margin = "0 10px";
+          quantityInput.disabled = true;
 
-          const halfButton = document.createElement("button");
-          halfButton.textContent = "Just Half";
-          halfButton.style.marginRight = "10px";
-          halfButton.onclick = () => {
-            quantityInput.value = Math.ceil(totalQty / 2);
+          quantityInput.onchange = () => {
             calculateTotal();
           };
 
           checkbox.onchange = () => {
             if (checkbox.checked) {
               quantityInput.disabled = false;
-              quantityInput.value = totalQty; // 当勾选时设置为最大数量
-              halfButton.disabled = false; // 启用按钮
+              quantityInput.value = totalQty;
             } else {
               quantityInput.disabled = true;
-              quantityInput.value = 0; // 取消勾选时重置为0
-              halfButton.disabled = true; // 禁用按钮
+              quantityInput.value = 0;
             }
             calculateTotal();
           };
 
-          priceElement.parentNode.insertBefore(halfButton, priceElement);
-          priceElement.parentNode.insertBefore(quantityInput, halfButton);
-          priceElement.parentNode.insertBefore(checkbox, quantityInput);
+          const container = document.createElement("div");
+          container.style.display = "flex";
+          container.style.alignItems = "center";
+
+          if (totalQty === 1) {
+            const halfButton = document.createElement("button");
+            halfButton.textContent = "Just Half";
+            halfButton.style.margin = "0 10px";
+            halfButton.onclick = () => {
+              quantityInput.value = 0.5;
+              calculateTotal();
+            };
+
+            container.appendChild(halfButton);
+          }
+
+          container.appendChild(quantityInput);
+          container.appendChild(priceElement.cloneNode(true));
+          container.appendChild(checkbox);
+
+          priceElement.parentNode.insertBefore(container, priceElement);
+          priceElement.remove();
         }
       });
   }
@@ -75,7 +90,7 @@
         const checkbox = document.getElementById("checkbox" + index);
         if (checkbox && checkbox.checked) {
           const quantityInput = document.getElementById("quantity" + index);
-          const purchasedQty = parseInt(quantityInput.value);
+          const purchasedQty = parseFloat(quantityInput.value);
           const qtyElement = item
             .querySelector(".item-qty-unit")
             .textContent.trim();
