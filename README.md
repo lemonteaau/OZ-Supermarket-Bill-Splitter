@@ -1,6 +1,6 @@
 # Woolies Bill Splitter
 
-This Tampermonkey script enhances your experience on the Woolworths website by adding functionality to split bills easily. 
+This userscript enhances your experience on the Woolworths website by adding functionality to split bills easily. 
 
 <img width="994" alt="Preview" src="https://github.com/lemonteaau/Woolies-Bill-Splitter/assets/104964583/2fae942e-1534-49c6-8690-4a7b1fd0ec77">
 
