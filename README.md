@@ -2,15 +2,17 @@
 
 This userscript enhances your experience on the Woolworths website by adding functionality to split bills easily. 
 
-<img width="994" alt="Preview" src="https://github.com/lemonteaau/Woolies-Bill-Splitter/assets/104964583/2fae942e-1534-49c6-8690-4a7b1fd0ec77">
+![image](https://github.com/user-attachments/assets/1fa93ca7-d0ee-4c23-94e0-c8d1e9fd2643)
 
 
 ## Features
 
-- **Checkbox Selection**: Allows you to select specific items from your Woolworths order to include in a shared bill calculation.
+- **Easy Item Selection**: Large, intuitive selection buttons make it simple to choose items to include in your split bill calculation.
 - **Quantity Input**: Adjust the quantity for each selected item, reflecting the share of the item that you are splitting.
 - **Dynamic Calculation**: Automatically calculates and displays the total cost of the selected items and quantities in real time.
-- **Support for Partial Quantities**: For items with a quantity of one, the script provides a "Just Half" button to quickly select half the quantity of the item.
+- **Toggle Half Portions**: For single items, easily toggle between full and half quantities with a dedicated button.
+- **Responsive Design**: Works on both desktop and mobile views of the Woolworths orders page.
+
 
 ## Installation
 
