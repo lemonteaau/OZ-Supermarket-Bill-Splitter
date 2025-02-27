@@ -30,13 +30,14 @@ This userscript enhances your experience on the Woolworths website by adding fun
 3. **Usage**: Navigate to the "My Orders" section of your Woolworths account. The script will automatically add checkboxes, quantity inputs, and the total calculation display to your order items.
 
 ## How It Works
-
 The script automatically detects the items listed in your Woolworths orders. For each item:
-- A checkbox is added to select the item.
+- A selection button is added to select the item.
 - A quantity input field is added next to each item, initially disabled and set to zero.
-- If an item's quantity is one, a "Just Half" button is also provided to quickly select half of that item.
+- If an item's quantity is one, a "½" button is provided to quickly toggle between half and full quantity.
+- Visual feedback provides clear indication of selected items and halved portions.
 
 As you select items and adjust quantities, the script calculates the total price for the selected share and displays it in a fixed position at the bottom right of the page.
+
 
 ## Compatibility
 
