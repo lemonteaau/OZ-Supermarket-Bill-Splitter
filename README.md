@@ -11,7 +11,7 @@ This userscript collection enhances your experience on major Australian supermar
 ## Supported Supermarkets
 
 ### 🛒 Woolworths Bill Splitter
-- **File**: `woolworths-bill-splitter.user.js`
+- **File**: `woolies-bill-splitter.user.js`
 - **Target**: `https://www.woolworths.com.au/shop/myaccount/myorders/*`
 
 ### 🛒 Coles Bill Splitter  
@@ -41,7 +41,7 @@ Both versions include the same core functionality:
    - Open Tampermonkey in your browser and click on "Create a new script".
    - Delete the default template that appears.
    - Copy and paste the entire code from your desired script file:
-     - For Woolworths: `woolworths-bill-splitter.user.js`
+     - For Woolworths: `woolies-bill-splitter.user.js`
      - For Coles: `coles-bill-splitter.user.js` 
      - You can install both if you shop at both supermarkets!
    - Save the script by clicking on the disk icon or pressing `Ctrl + S`.
