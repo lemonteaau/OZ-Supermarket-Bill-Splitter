@@ -4,7 +4,7 @@
 // @version      0.3
 // @description  Add checkboxes to Woolworths order items to calculate shared costs, handling substitutions
 // @author       lemontea
-// @match        https://www.woolworths.com.au/shop/myaccount/myorders/*
+// @match        https://www.woolworths.com.au/*
 // @grant        none
 // ==/UserScript==
 
