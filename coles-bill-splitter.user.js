@@ -4,7 +4,7 @@
 // @version      0.1
 // @description  Add checkboxes to Coles order items to calculate shared costs, handling substitutions
 // @author       lemontea
-// @match        https://www.coles.com.au/account/orders/*
+// @match        https://www.coles.com.au/*
 // @grant        none
 // ==/UserScript==
 
